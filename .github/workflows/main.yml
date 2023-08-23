@@ -4,6 +4,12 @@ jobs:
   ansibleplaybook:
    runs-on: ubuntu-latest
    steps:
-      - uses: dawidd6/action-ansible-playbook@v1
-      - name: run ansible playbook
-        run: ansible-playbook demo.yaml
+   - name: Run playbook
+     uses: dawidd6/action-ansible-playbook@v2
+     with:
+    # Required, playbook filepath
+      playbook: demo.yaml
+      # Optional, directory where playbooks live
+      directory: ./
+   - name: run ansible playbook
+     run: ansible-playbook demo.yaml
