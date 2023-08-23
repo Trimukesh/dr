@@ -1,0 +1,11 @@
+name: Go package
+on: workflow_dispatch
+jobs:    
+  ansibleplaybook:
+   runs-on: ubuntu-latest
+   steps:
+      - uses: actions/checkout@v1
+      - name: actions
+      - uses: dawidd6/action-ansible-playbook@v1
+      - name: run ansible playbook
+        run: ansible-playbook demo.yaml
