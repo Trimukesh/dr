@@ -6,5 +6,4 @@ jobs:
    steps:
       - name: run ansible playbook
         uses: dawidd6/action-ansible-playbook@v1
-      - name: playbook  
         run: ansible-playbook demo.yaml
